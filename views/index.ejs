@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <title>Dharwin's URL Shortener</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12 text-center text-monospace">
+                <h1>Dharwin's URL Shortner</h1>
+            </div>
+        </div>
+        <form action="/create" method="POST" class="mt-2">
+            <div class="input-group mb-3">
+                <input type="text" name="longurl" class="form-control"
+                    style="background-color: rgba(247, 219, 144, 0.829);" placeholder="Enter long URL"
+                    aria-label="Enter long URL" name="longurl" aria-describedby="button-addon2" />
+                <div class="input-group-append">
+                    <input class="btn btn-danger" type="submit" value="Submit" id="button-addon2">
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <% for( let i = 0; i < info.length; i++ ) { %>
+            <div class="col-lg-3 my-2">
+                <div class="card" style="background-color: rgba(238, 150, 34, 0.301);">
+                    <div class="card-header" style="background-color: rgba(167, 228, 161, 0.829);">Total click:
+                        <%=info[i].count%></div>
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="/<%=info[i].shorturl%>"
+                                target="_blank">http://dharwin.com/<%=info[i].shorturl%></a></h5>
+                        <p class="card-text"><%=info[i].longurl%></p>
+                        <a href="/delete/<%=info[i]._id %> " class="btn btn-danger">Remove</a>
+                    </div>
+                </div>
+            </div>
+
+            <% } %>
+
+        </div>
+    </div>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
