@@ -1,5 +1,5 @@
-# url-shortner
-## Live Demo: https://dharwin-url-shortner.herokuapp.com
+# dwin-url-compressor
+## Live Demo: https://dwin-url-compressor.herokuapp.com
 
 <img src="Demo images/0.gif">
 <img src="Demo images/1.png">
