@@ -7,7 +7,7 @@
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <title>Dharwin's URL Shortener</title>
+    <title>DWin URL Compressor</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 </head>
 
@@ -15,7 +15,7 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-12 text-center text-monospace">
-                <h1>Dharwin's URL Shortner</h1>
+                <h1>DWin URL Compressor</h1>
             </div>
         </div>
         <form action="/create" method="POST" class="mt-2">
@@ -36,7 +36,7 @@
                         <%=info[i].count%></div>
                     <div class="card-body">
                         <h5 class="card-title"><a href="/<%=info[i].shorturl%>"
-                                target="_blank">http://dharwin.com/<%=info[i].shorturl%></a></h5>
+                                target="_blank">http://dwin.com/<%=info[i].shorturl%></a></h5>
                         <p class="card-text"><%=info[i].longurl%></p>
                         <a href="/delete/<%=info[i]._id %> " class="btn btn-danger">Remove</a>
                     </div>
