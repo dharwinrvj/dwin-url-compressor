@@ -62,7 +62,7 @@ mongoose.set("useNewUrlParser", true);
 mongoose.set("useUnifiedTopology", true);
 
 mongoose.connect(
-  "mongodb+srv://dharwin:rupparam@dharwin.wkbz4.mongodb.net/urlshortner?retryWrites=true&w=majority",
+  "mongodb+srv://dharwinrvj:rupparam@dharwin.wkbz4.mongodb.net/urlshortner?retryWrites=true&w=majority",
   (err) => {
     if (err) throw err;
     console.log("DB connected");
