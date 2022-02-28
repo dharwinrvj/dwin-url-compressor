@@ -60,9 +60,16 @@ app.listen(port, () => {
 
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useUnifiedTopology", true);
-
+//local-db
+/*
+mongoose.connect("mongodb//127.0.0.1:27017/urlshortner", (err) => {
+  if (err) throw err;
+  console.log("DB connected");
+});
+*/
+//remote-db
 mongoose.connect(
-  "mongodb+srv://dharwinrvj:rupparam@dharwin.wkbz4.mongodb.net/urlshortner?retryWrites=true&w=majority",
+  "mongodb+srv://dharwin:9715928749@dharwin.wkbz4.mongodb.net/urlshortner?retryWrites=true&w=majority",
   (err) => {
     if (err) throw err;
     console.log("DB connected");
