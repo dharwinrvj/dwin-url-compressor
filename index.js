@@ -69,7 +69,7 @@ mongoose.connect("mongodb//127.0.0.1:27017/urlshortner", (err) => {
 */
 //remote-db
 mongoose.connect(
-  "mongodb+srv://dharwin:9715928749@dharwin.wkbz4.mongodb.net/urlshortner?retryWrites=true&w=majority",
+  "mongodb+srv://dharwin:9715928749@dharwin.wkbz4.mongodb.net/url-compressor?retryWrites=true&w=majority",
   (err) => {
     if (err) throw err;
     console.log("DB connected");
